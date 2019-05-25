@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title: How to use Stack Edit io
-categories: [markdown, github pages]
-thumbnail: /images/HCmails/HCmailsthumb.jpg
+title: How to use Stack Editio
+categories: [graph, data science]
+thumbnail: /images/zoommiddleeast.png
 ---
 
 # Welcome to StackEdit!
