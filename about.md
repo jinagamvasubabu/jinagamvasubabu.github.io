@@ -94,6 +94,7 @@ Tech Stack - Spring Cloud Stream, Kafka, ELK, Java8, Docker
 
 ### Senior Technical Lead
 Company: Tesco , Bengaluru, Karnataka 
+
 ```
 FulfilmentPoint System (Strategic) (Team 52):
 Team Size: 6
