@@ -35,7 +35,8 @@ Cloud, Netflix OSS stack, Hibernate, Spring Boot, Node JS, ReactJS with FLUX, Ka
 ### Lead Software Developer
 Company:  Licious, Bengaluru, Karnataka
 
-``` Merchant Integration Platform - ( Sell Licious Meat in external Market place)
+``` 
+Merchant Integration Platform - ( Sell Licious Meat in external Market place)
 Role : Team Lead
 Team Size : 3
 Involved in design, develop and documentation.
