@@ -16,7 +16,6 @@ Cloud, Netflix OSS stack, Hibernate, Spring Boot, Node JS, ReactJS with FLUX, Ka
 
 
 ## Skills
-
 * Java/J2EE
 * Java 8, Java 9 
 * Python3 
@@ -31,10 +30,10 @@ Cloud, Netflix OSS stack, Hibernate, Spring Boot, Node JS, ReactJS with FLUX, Ka
 * RxJava
 * GIT/SVN
 * Spinnaker, terraform, Docker, Kubernetes, Jenkins, Bamboo, AWS
-## Work History
 
+## Work History
 ### Lead Software Developer
-###### Company:  Licious, Bengaluru, Karnataka
+Company:  Licious, Bengaluru, Karnataka
 ``` Merchant Integration Platform - ( Sell Licious Meat in external Market place)
 Role : Team Lead
 Team Size : 3
@@ -88,9 +87,8 @@ Notification Service supports Webhook, Email currently
 Tech Stack - Spring Cloud Stream, Kafka, ELK, Java8, Docker
 ```
 ### Senior Technical Lead
-
+Company: Tesco , Bengaluru, Karnataka 
 ```
-Tesco , Bengaluru, Karnataka
 FulfilmentPoint System (Strategic) (Team 52):
 Team Size: 6
 Role: Lead Developer
@@ -110,23 +108,19 @@ using spinnaker to build and deploy with one click using spinnaker with a
 neat user interface.
 Tech Stack - Spinnaker, Terraform, AWS
 ```
-#### 2017-08 - 2018-
-
+#### 2017-08 - 2018
 ### Senior Software Developer
-
+Company: IG Group, Bengaluru, Karnataka
 ```
-IG Group, Bengaluru, Karnataka
 Account Opening & MIFID:
 Team Size: 12
 Tech Stack - ReactJs,LESS,Html,Java,SpringBoot,Spring MVC,TDD,Oracle 10g
 ```
-#### 2015-12 - 2017-
-
-
+#### 2015-12 - 2017
 ### Software Engineer
+Company: Razorthink Software Pvt Ltd, Bengaluru, Karnataka
 
 ```
-Razorthink Software Pvt Ltd, Bengaluru, Karnataka
 Cerebro - (Intelligent Collaboration tool for Razorthink)
 Client: Razorthink
 Tech Stack - NodeJS,Javascript,ExpressJS,MongoDB,Socket.IO,AngularJS
@@ -146,7 +140,7 @@ the risk levels and plot graphs and give an option to export to PDF/Excel.
 Tech Stack - Java EE, Hibernate, MS SQL 2008R2, JBoss 4.2.3GA, Restful Web
 services,Eclipse BIRT,Javascript
 ```
-#### 2012-05 - 2015-
+#### 2012-05 - 2015
 
 ## Education
 
