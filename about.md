@@ -34,6 +34,7 @@ Cloud, Netflix OSS stack, Hibernate, Spring Boot, Node JS, ReactJS with FLUX, Ka
 ## Work History
 ### Lead Software Developer
 Company:  Licious, Bengaluru, Karnataka
+
 ``` Merchant Integration Platform - ( Sell Licious Meat in external Market place)
 Role : Team Lead
 Team Size : 3
@@ -42,6 +43,7 @@ Clients are: Apna Complex, Godrej Naturesbasket, Big Basket
 Tech Stack - Java8, Spring Boot, Spring Cloud stream, Kafka, Zoo keeper,
 MySQL, Mongodb, ELK, Docker, AWS, Jenkins
 ```
+
 ```
 Vyaktitva - (Licious IAM)
 Team Size : 1
@@ -67,6 +69,7 @@ for every request from IAM) and takes care of throttling, Routing and
 Versioning.
 Tech Stack - Zuul, AWS,MySQL, Java 8, Jenkins, Spring Cloud,Docker
 ```
+
 ```
 Inventory Management System:
 Team Size: 3
@@ -78,6 +81,7 @@ Inventory Model
 Tech Stack - Spring Boot,AWS,Postgres, Java 8, Jenkins, Spring
 Cloud,Docker
 ```
+
 ```
 Madhyama  - (Licious Centralised Event Stream)
 Team Size: 3
@@ -86,6 +90,7 @@ Catalog and update the respective clients using Notification Service. 
 Notification Service supports Webhook, Email currently
 Tech Stack - Spring Cloud Stream, Kafka, ELK, Java8, Docker
 ```
+
 ### Senior Technical Lead
 Company: Tesco , Bengaluru, Karnataka 
 ```
@@ -98,6 +103,7 @@ marshall it and make it ready for delivery.
 Tech Stack - Spring Boot, AWS, MongoDB, Java 8, Terraform, Kafka Spring
 Cloud, Kubernetes,Docker
 ```
+
 ```
 Automated Cloud CI/CD (Team 52) :
 Team Size: 1
@@ -108,6 +114,7 @@ using spinnaker to build and deploy with one click using spinnaker with a
 neat user interface.
 Tech Stack - Spinnaker, Terraform, AWS
 ```
+
 #### 2017-08 - 2018
 ### Senior Software Developer
 Company: IG Group, Bengaluru, Karnataka
@@ -116,10 +123,10 @@ Account Opening & MIFID:
 Team Size: 12
 Tech Stack - ReactJs,LESS,Html,Java,SpringBoot,Spring MVC,TDD,Oracle 10g
 ```
+
 #### 2015-12 - 2017
 ### Software Engineer
 Company: Razorthink Software Pvt Ltd, Bengaluru, Karnataka
-
 ```
 Cerebro - (Intelligent Collaboration tool for Razorthink)
 Client: Razorthink
@@ -140,50 +147,22 @@ the risk levels and plot graphs and give an option to export to PDF/Excel.
 Tech Stack - Java EE, Hibernate, MS SQL 2008R2, JBoss 4.2.3GA, Restful Web
 services,Eclipse BIRT,Javascript
 ```
-#### 2012-05 - 2015
-
-## Education
-
-### SSC, Ushodaya Public School
-
-```
-Srikakulam
-Aggregate: 77.5%
-```
-#### 2005
-
-### PUC, Narayana Junior College
-
-```
-MPC, Srikakulam
-Aggregate: 86.7%
-```
-#### 2007
-
-### Bachelor of Technology, Sri Sivani College of Engineering
-
-```
-Computer Engineering, Srikakulam
-Aggregate: 70%
-```
-#### 2011
 
 ## Accomplishments
 
 ```
 Got 2 times award as best team player award and awarded with a Bonus.
 ```
+
 ## Social
 
 ```
 LinkedIn: https://bit.ly/2TrBSXJ=
 Github: https://github.com/jinagamvasubabu
 ```
+
 ## hangoutdude.com
 
 ```
 My own  blog for sharing my knowledge over tech, travel and food
 ```
-
-
-
