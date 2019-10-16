@@ -1,151 +1,91 @@
 ---
 layout: post
 comments: true
-title: How to use Stack Editio
+title: Upgrading Go Version to 1.13 is not a cakewalk!!!!
 categories: [graph, data science]
 thumbnail: /images/zoommiddleeast.png
 ---
 
-# Welcome to StackEdit!
+## Why it's not a `cakewalk`?
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+Be aware that upgrading the version of Go from older versions to 1.13 is not so easy, it comes with new difficulties due to these recent changes:
+* Version validation:
+   * In 1.13 Go performs additional validation on the requested version string. The `+incompatible` version annotation bypasses the requirement of semantic import versioning for repositories that predate the introduction of modules. The go command now verifies that such a version does not include an explicit go.mod file.
+  Refer for more info `https://golang.org/doc/go1.13#/version-validation` 
+* Changes to the Environment Variable `https://golang.org/doc/go1.13#/proxy-vars`
+* Proxy Servers:
+   * If your company having private repositories then you need to set these below environment variables
+       * go env -w GONOSUMDB="****" # use your github or bitbucket repo base url
+       * go env -w GONOPROXY="****" # use your github or bitbucket repo base url
+       * go env -w GOPROXY="https://proxy.golang.org,direct" #this should already be the default
+       * go env -w GOPRIVATE="****" # use your github or bitbucket repo base url
 
+Before start upgrading first clean your mod cache:
+`GO111MODULE=on go clean -modcache`
 
-# Files
+I will be listing out the possible errors and it's respective solutions as well. 
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+#### #1: If you are using go-micro framework
+```
+go: bitbucket.org/****/**** requires
+    github.com/micro/go-plugins@v0.25.0 requires
+    gocloud.dev@v0.10.0 requires
+    contrib.go.opencensus.io/exporter/ocagent@v0.4.2 requires
+    github.com/census-instrumentation/opencensus-proto@v0.1.0-0.20181214143942-ba49f56771b8: invalid pseudo-version: version before v0.1.0 would have   negative patch number
+``` 
 
-## Create files and folders
-
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
-
-## Switch to another file
-
-All your files are listed in the file explorer. You can switch from one to another by clicking a file in the list.
-
-## Rename a file
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
-## Delete a file
-
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
-
-# Synchronization
-
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
-
-There are two types of synchronization and they can complement each other:
-
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
-
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
-
-## Open a file
-
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
-
-## Save a file
-
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
-
-## Synchronize a file
-
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
-
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
-
-
-# Publication
-
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
-
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-## Update a publication
-
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
+#### fix:
+```
+Add this at last in your `go.mod` file
+replace github.com/census-instrumentation/opencensus-proto v0.1.0-0.20181214143942-ba49f56771b8 => github.com/census-instrumentation/opencensus-proto v0.0.3-0.20181214143942-ba49f56771b8
 ```
 
-And this will produce a flow chart:
 
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+#### #2: `Protobuf` related problems
 ```
+go: k8s.io/api@v0.0.0-20190726022912-69e1bce1dad5 requires
+    github.com/gogo/protobuf@v0.0.0-20190410021324-65acae22fc9: invalid pseudo-version: revision is shorter than canonical (65acae22fc9d)
+S
+```
+
+#### fix:
+```
+Add this at last in your `go.mod` file
+replace github.com/gogo/protobuf v0.0.0-20190410021324-65acae22fc9 => github.com/gogo/protobuf v0.0.0-20190723190241-65acae22fc9d
+```
+
+
+#### #3: `github.com/instana/go-sensor` related
+
+
+#### fix:
+```
+Add this at last in your `go.mod` file
+replace github.com/instana/go-sensor => github.com/instana/golang-sensor v1.5.0
+```
+
+
+#### #4: Issue with `mailgun-go`
+
+#### fix:
+```
+Add this at last in your `go.mod` file
+replace github.com/mailgun/mailgun-go => github.com/mailgun/mailgun-go v0.0.0-20180718145431-bbe57f98d550
+```
+
+#### #5: Issue with `hashicorp` ambiguous import issue
+```
+cannot load github.com/hashicorp/consul/api: ambiguous import: found github.com/hashicorp/consul/api in multiple modules:
+        github.com/hashicorp/consul v1.4.4 (/Users/vasubabujinagam/go/pkg/mod/github.com/hashicorp/consul@v1.4.4/api)
+        github.com/hashicorp/consul/api v1.1.0 (/Users/vasubabujinagam/go/pkg/mod/github.com/hashicorp/consul/api@v1.1.0)
+S
+```
+
+#### fix:
+```
+Add this at last in your `go.mod` file
+replace github.com/hashicorp/consul => github.com/hashicorp/consul v1.5.1
+```
+
+
+if you are facing anything other than this, please post in the comment section.
