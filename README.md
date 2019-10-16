@@ -1,7 +1,7 @@
 
 # Vasubabu Jinagam Personal blog
 
-You can view the blog at [hangoutdude.com](http://www.hangoutdude.com)
+You can view the blog at [hangoutdude.com](https://hangoutdude.com)
 
 # How it was made
 
