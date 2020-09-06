@@ -2,17 +2,11 @@
 layout: default
 ---
 
-<div class="page-single">
-    <div class="entry-header">       
-        <h1 class="posttitle">{{ page.title }}</h1>        
-    </div>
-</div>
+<article class="page">
 
-<!-- Featured Image -->
-{% include featured-image.html %}
+  <h1>{{ page.title }}</h1>
 
-<!-- Content -->
-{% include article.html %}
-
-<!-- Comments if not disabled with comments: false -->
-{% include comments.html %}
+  <div class="entry">
+    {{ content }}
+  </div>
+</article>
