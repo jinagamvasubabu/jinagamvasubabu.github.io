@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hangoutdude</title>
+    <description>A Lazy Coders blog!!!</description>
+    <link>http://localhost:4000/jekyll-theme-memoirs/</link>
+    <atom:link href="http://localhost:4000/jekyll-theme-memoirs/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 06 Sep 2020 13:04:35 +0530</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2020 13:04:35 +0530</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>Education must also train one for quick, resolute and effective thinking.</title>
+        <description>&lt;p&gt;Memoirs theme has Prism highlighter integrated. I will show you in this post a few examples of how it looks if you are a developer planning to add pieces of code on your website.&lt;/p&gt;
+
+&lt;h4 id=&quot;html&quot;&gt;HTML&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;li class=&quot;ml-1 mr-1&quot;&amp;gt;
+    &amp;lt;a target=&quot;_blank&quot; href=&quot;#&quot;&amp;gt;
+    &amp;lt;i class=&quot;fab fa-twitter&quot;&amp;gt;&amp;lt;/i&amp;gt;
+    &amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;css&quot;&gt;CSS&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.highlight .c {
+    color: #999988;
+    font-style: italic; 
+}
+.highlight .err {
+    color: #a61717;
+    background-color: #e3d2d2; 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;js&quot;&gt;JS&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// alertbar later
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y &amp;gt; 280) {
+        $('.alertbar').fadeIn();
+    } else {
+        $('.alertbar').fadeOut();
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;python&quot;&gt;Python&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;print(&quot;Hello World&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;ruby&quot;&gt;Ruby&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'redcarpet'
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;c&quot;&gt;C&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;printf(&quot;Hello World&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Tue, 12 Jun 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/jekyll-theme-memoirs/education/</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll-theme-memoirs/education/</guid>
+        
+        
+        <category>Lifestyle</category>
+        
+      </item>
+    
+  </channel>
+</rss>
